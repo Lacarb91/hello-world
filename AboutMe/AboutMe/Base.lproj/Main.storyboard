@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GYI-7p-4mf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--About-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr2-wQ-VVy">
+                                <rect key="frame" x="153.5" y="135" width="107.5" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name is Lana. I am 31 years old. I live in Blackbutt, NSW, Australia. I work as an Early Childhood Teacher." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKB-nz-8eP">
+                                <rect key="frame" x="38" y="278.5" width="338" height="139"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="139" id="xTY-cn-keH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="Lr2-wQ-VVy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Ge-xz-3Fa"/>
+                            <constraint firstItem="YKB-nz-8eP" firstAttribute="top" secondItem="Lr2-wQ-VVy" secondAttribute="bottom" constant="116" id="OgY-ES-cB2"/>
+                            <constraint firstItem="Lr2-wQ-VVy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="Tj9-MC-aZG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YKB-nz-8eP" secondAttribute="trailing" constant="38" id="cC5-MP-jhQ"/>
+                            <constraint firstItem="YKB-nz-8eP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="uie-jh-c5N"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="person.fill" catalog="system" selectedImage="person" id="bnz-2H-GzL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1000.0000000000001" y="728.57142857142856"/>
+        </scene>
+        <!--Family-->
+        <scene sceneID="MsM-wB-Avl">
+            <objects>
+                <viewController id="H5B-jq-qpY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DdS-P8-KpJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About My Family" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ltg-OU-EPp">
+                                <rect key="frame" x="114.5" y="135" width="185" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I live with my husband, Josh. My Mum, Dad and brother Lucas live in Figtree." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7F-fi-09c">
+                                <rect key="frame" x="38" y="279" width="338" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="1ll-6a-Fy7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eoY-Fk-QNa"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="Ltg-OU-EPp" firstAttribute="top" secondItem="eoY-Fk-QNa" secondAttribute="top" constant="91" id="Gjx-id-6K5"/>
+                            <constraint firstItem="Ltg-OU-EPp" firstAttribute="centerX" secondItem="DdS-P8-KpJ" secondAttribute="centerX" id="NIE-9G-AFs"/>
+                            <constraint firstItem="U7F-fi-09c" firstAttribute="leading" secondItem="DdS-P8-KpJ" secondAttribute="leading" constant="38" id="W6O-TT-ZHf"/>
+                            <constraint firstItem="U7F-fi-09c" firstAttribute="centerX" secondItem="DdS-P8-KpJ" secondAttribute="centerX" id="aej-R8-FyE"/>
+                            <constraint firstItem="U7F-fi-09c" firstAttribute="top" secondItem="Ltg-OU-EPp" secondAttribute="bottom" constant="116" id="wft-EP-Gdo"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Family" image="person.3.fill" catalog="system" selectedImage="person.3" id="j7w-8Q-xvV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w27-aI-lbn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-323.1884057971015" y="728.57142857142856"/>
+        </scene>
+        <!--Hobbies-->
+        <scene sceneID="lr9-HM-Tim">
+            <objects>
+                <viewController id="gT4-XU-z4M" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vnw-JE-YKQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About My Hobbies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53N-ux-cAg">
+                                <rect key="frame" x="104.5" y="135" width="205" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXF-aQ-uCr">
+                                <rect key="frame" x="38" y="279" width="338" height="81.5"/>
+                                <string key="text">I like to read, do pilates and walking, meditate, journal, learn to code swift, and make digitial illustrations and creations with cricut.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1GS-Cr-RTa"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="53N-ux-cAg" firstAttribute="centerX" secondItem="vnw-JE-YKQ" secondAttribute="centerX" id="gDf-ol-8M6"/>
+                            <constraint firstItem="53N-ux-cAg" firstAttribute="top" secondItem="1GS-Cr-RTa" secondAttribute="top" constant="91" id="hiX-a9-Zbe"/>
+                            <constraint firstItem="XXF-aQ-uCr" firstAttribute="top" secondItem="53N-ux-cAg" secondAttribute="bottom" constant="116" id="jtQ-vb-XAq"/>
+                            <constraint firstItem="XXF-aQ-uCr" firstAttribute="centerX" secondItem="vnw-JE-YKQ" secondAttribute="centerX" id="wE6-UM-5Ln"/>
+                            <constraint firstItem="XXF-aQ-uCr" firstAttribute="leading" secondItem="1GS-Cr-RTa" secondAttribute="leading" constant="38" id="xns-xq-2L8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hobbies" image="brain.head.profile" catalog="system" selectedImage="brain.head.profile" id="hoU-EY-VwM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Gf-8K-I6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402.89855072463769" y="728.57142857142856"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="08v-la-avS">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GYI-7p-4mf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yqF-BA-6Sq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="gqi-eo-SzN"/>
+                        <segue destination="H5B-jq-qpY" kind="relationship" relationship="viewControllers" id="xpU-OE-tCx"/>
+                        <segue destination="gT4-XU-z4M" kind="relationship" relationship="viewControllers" id="FBx-Wa-r4v"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sny-E0-52m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-362" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="brain.head.profile" catalog="system" width="114" height="128"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

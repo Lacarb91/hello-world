@@ -9,7 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var listOfWords = ["fuckwit", "kombucha", "worldcup", "forklift"]
+    var listOfWords = ["pizza", "kombucha", "sushi", "coffee"].shuffled()
+    
 let incorrectMovesAllowed = 7
     
     var totalWins = 0 {
@@ -32,6 +33,7 @@ newRound ()
         if !listOfWords.isEmpty {
         let newWord = listOfWords.removeFirst()
         currentGame = Game(word: newWord, incorrectMovesRemaining: incorrectMovesAllowed, guessedLetters: [])
+            enableLetterButtons(true)
         updateUI()
         } else {
             enableLetterButtons(false)
