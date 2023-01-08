@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home Page View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MatchingGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="homePageViewController" customModule="MatchingGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +33,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Play"/>
                                 <connections>
                                     <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dKG-7L-i9b"/>
-                                    <segue destination="BVC-ls-DZ8" kind="show" id="pXv-Km-lhL"/>
+                                    <segue destination="BVC-ls-DZ8" kind="show" id="vdt-SO-Fsq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="712.88433382137623" y="68.5546875"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="InQ-Ms-pXy">
             <objects>
-                <viewController id="BVC-ls-DZ8" customClass="ViewController" customModule="MatchingGame" sceneMemberID="viewController">
+                <viewController id="BVC-ls-DZ8" customClass="gameViewController" customModule="MatchingGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleAspectFit" id="xU8-Jd-aif">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,32 +71,53 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="fXC-F3-9W4">
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="30" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fXC-F3-9W4">
                                 <rect key="frame" x="83" y="312" width="1200" height="400"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sushi_in_10_steps" translatesAutoresizingMaskIntoConstraints="NO" id="jZn-oY-6RL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07H-Dr-4a2">
                                         <rect key="frame" x="0.0" y="0.0" width="380" height="400"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shutterstock_2042520416-1_374635aacd4cafccef5bb0653ee5dedb" translatesAutoresizingMaskIntoConstraints="NO" id="47f-90-Niv">
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Sushi_in_10_steps">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="default"/>
+                                            <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pictureButtonPressed:" destination="BVC-ls-DZ8" eventType="touchUpInside" id="SUs-iC-ODm"/>
+                                            <action selector="sushiButton:" destination="BVC-ls-DZ8" eventType="touchUpInside" id="QUP-0X-4z3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyX-Sa-g7p">
                                         <rect key="frame" x="410" y="0.0" width="380" height="400"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="remedy-kombucha-57708-2" translatesAutoresizingMaskIntoConstraints="NO" id="s9l-oH-WQS">
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="shutterstock_2042520416-1_374635aacd4cafccef5bb0653ee5dedb"/>
+                                        <connections>
+                                            <action selector="pictureButtonPressed:" destination="BVC-ls-DZ8" eventType="touchUpInside" id="9nR-Hi-RnX"/>
+                                            <action selector="pizzaButton:" destination="BVC-ls-DZ8" eventType="touchUpInside" id="uxd-xe-Hdl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBz-sO-uBo">
                                         <rect key="frame" x="820" y="0.0" width="380" height="400"/>
-                                    </imageView>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="remedy-kombucha-57708-2"/>
+                                        <connections>
+                                            <action selector="kombuchaButton:" destination="BVC-ls-DZ8" eventType="touchUpInside" id="8Cl-1z-3nV"/>
+                                            <action selector="pictureButtonPressed:" destination="BVC-ls-DZ8" eventType="touchUpInside" id="vaA-rI-0gx"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="CKx-I5-MHO"/>
                                     <constraint firstAttribute="width" constant="1200" id="zh0-TR-y9W"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFh-yd-7PM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFh-yd-7PM">
                                 <rect key="frame" x="627" y="146" width="112" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9V-zF-lt5">
-                                <rect key="frame" x="579" y="806" width="208" height="95.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9V-zF-lt5">
+                                <rect key="frame" x="533" y="764" width="300" height="191"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="80"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -106,38 +127,41 @@
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
                             <constraint firstItem="fXC-F3-9W4" firstAttribute="centerX" secondItem="xU8-Jd-aif" secondAttribute="centerX" id="2BN-HO-5wT"/>
+                            <constraint firstItem="fXC-F3-9W4" firstAttribute="leading" secondItem="MSw-lw-e9z" secondAttribute="leading" constant="83" id="4H1-28-j87"/>
                             <constraint firstItem="7JD-5W-IcE" firstAttribute="leading" secondItem="MSw-lw-e9z" secondAttribute="leading" id="56V-4k-dK6"/>
-                            <constraint firstItem="D9V-zF-lt5" firstAttribute="centerX" secondItem="xU8-Jd-aif" secondAttribute="centerX" id="8Uv-ka-TYe"/>
-                            <constraint firstItem="D9V-zF-lt5" firstAttribute="top" secondItem="fXC-F3-9W4" secondAttribute="bottom" constant="94" id="BQd-ry-FQp"/>
+                            <constraint firstItem="D9V-zF-lt5" firstAttribute="top" secondItem="fXC-F3-9W4" secondAttribute="bottom" constant="52" id="A4X-hG-ITO"/>
                             <constraint firstAttribute="bottom" secondItem="7JD-5W-IcE" secondAttribute="bottom" constant="904" id="CNt-fl-Uey"/>
-                            <constraint firstItem="D9V-zF-lt5" firstAttribute="centerX" secondItem="xU8-Jd-aif" secondAttribute="centerX" id="Dmy-AW-cZI"/>
                             <constraint firstItem="MFh-yd-7PM" firstAttribute="leading" secondItem="MSw-lw-e9z" secondAttribute="leading" constant="627" id="IeR-28-xv7"/>
                             <constraint firstItem="7JD-5W-IcE" firstAttribute="top" secondItem="MSw-lw-e9z" secondAttribute="top" id="JRb-i5-xpf"/>
+                            <constraint firstItem="MFh-yd-7PM" firstAttribute="centerX" secondItem="xU8-Jd-aif" secondAttribute="centerX" id="ODx-P1-pAI"/>
+                            <constraint firstItem="MSw-lw-e9z" firstAttribute="trailing" secondItem="fXC-F3-9W4" secondAttribute="trailing" constant="83" id="SDC-sb-vay"/>
                             <constraint firstItem="MFh-yd-7PM" firstAttribute="centerX" secondItem="xU8-Jd-aif" secondAttribute="centerX" id="Ys0-Yd-Xy7"/>
                             <constraint firstItem="MFh-yd-7PM" firstAttribute="top" secondItem="MSw-lw-e9z" secondAttribute="top" constant="76" id="ZnX-M1-AVN"/>
                             <constraint firstItem="MFh-yd-7PM" firstAttribute="centerX" secondItem="xU8-Jd-aif" secondAttribute="centerX" id="baX-Hi-jv0"/>
+                            <constraint firstItem="D9V-zF-lt5" firstAttribute="leading" secondItem="MSw-lw-e9z" secondAttribute="leading" constant="533" id="e7q-Zq-Gl8"/>
                             <constraint firstItem="MSw-lw-e9z" firstAttribute="trailing" secondItem="7JD-5W-IcE" secondAttribute="trailing" constant="1253.5" id="hN4-Ek-pHe"/>
+                            <constraint firstItem="MSw-lw-e9z" firstAttribute="bottom" secondItem="D9V-zF-lt5" secondAttribute="bottom" constant="69" id="mGf-Eu-kDm"/>
                             <constraint firstItem="fXC-F3-9W4" firstAttribute="centerY" secondItem="xU8-Jd-aif" secondAttribute="centerY" id="q05-vh-iSN"/>
-                            <constraint firstItem="D9V-zF-lt5" firstAttribute="leading" secondItem="MSw-lw-e9z" secondAttribute="leading" constant="579" id="v8X-Uv-pfa"/>
+                            <constraint firstItem="D9V-zF-lt5" firstAttribute="centerX" secondItem="fXC-F3-9W4" secondAttribute="centerX" id="u6i-yz-bcW"/>
+                            <constraint firstItem="MFh-yd-7PM" firstAttribute="centerX" secondItem="xU8-Jd-aif" secondAttribute="centerX" id="yUE-CA-1Mh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vxk-Jd-RvK"/>
                     <connections>
-                        <outlet property="kombuchaButton" destination="s9l-oH-WQS" id="fWA-tI-1jm"/>
-                        <outlet property="pizzaButton" destination="47f-90-Niv" id="AIr-yQ-uLK"/>
                         <outlet property="scoreLabel" destination="MFh-yd-7PM" id="yAH-tf-g7j"/>
-                        <outlet property="sushiButton" destination="jZn-oY-6RL" id="RQM-qm-MLb"/>
                         <outlet property="wordLabel" destination="D9V-zF-lt5" id="7BT-Ny-x9Y"/>
+                        <segue destination="Xa5-RE-ET6" kind="show" identifier="gameOver" id="1i9-ta-9GH"/>
+                        <segue destination="3I2-wB-uRM" kind="show" identifier="youWon" id="rs0-eB-Suc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEO-5s-5o8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1402.9282576866763" y="68.5546875"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Over View Controller-->
         <scene sceneID="UhA-GP-SQl">
             <objects>
-                <viewController id="Xa5-RE-ET6" customClass="ViewController" customModule="MatchingGame" sceneMemberID="viewController">
+                <viewController id="Xa5-RE-ET6" customClass="gameOverViewController" customModule="MatchingGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A6x-2w-oe2">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,6 +190,8 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="playAgainButton:" destination="Xa5-RE-ET6" eventType="touchUpInside" id="13N-br-VmN"/>
+                                            <action selector="playAgainGameOverButton:" destination="Xa5-RE-ET6" eventType="touchUpInside" id="1Ay-bB-tIt"/>
+                                            <segue destination="0hh-ut-KkG" kind="unwind" unwindAction="unwindToGameWithUnwindSegue:" id="LoB-ZJ-9H1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -178,19 +204,21 @@
                             <constraint firstItem="9st-c7-Zxc" firstAttribute="centerX" secondItem="A6x-2w-oe2" secondAttribute="centerX" id="SpU-Ww-exg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="zM7-ez-L4X"/>
                     <connections>
                         <outlet property="finalScoreGameOverLabel" destination="IMt-7E-DeM" id="zIv-P1-NjJ"/>
                         <outlet property="gameOverLabel" destination="hEv-F1-cop" id="9u9-S9-7JZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T8W-YE-ul7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="0hh-ut-KkG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="363" y="877"/>
         </scene>
-        <!--View Controller-->
+        <!--You Won View Controller-->
         <scene sceneID="dlU-wm-vFY">
             <objects>
-                <viewController id="3I2-wB-uRM" customClass="ViewController" customModule="MatchingGame" sceneMemberID="viewController">
+                <viewController id="3I2-wB-uRM" customClass="youWonViewController" customModule="MatchingGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qui-90-TU9">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,6 +247,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="playAgainYouWonButton:" destination="3I2-wB-uRM" eventType="touchUpInside" id="GsB-KQ-ytg"/>
+                                            <segue destination="6Uz-pM-ARk" kind="unwind" unwindAction="unwindToGameWithUnwindSegue:" id="Gvn-ZN-anX"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -231,12 +260,14 @@
                             <constraint firstItem="6Zf-el-7B2" firstAttribute="centerX" secondItem="qui-90-TU9" secondAttribute="centerX" id="Fkj-PT-GHz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ZOG-No-NEF"/>
                     <connections>
                         <outlet property="finalScoreYouWonLabel" destination="nr3-bE-I7j" id="lJx-cn-dmR"/>
                         <outlet property="youWonLabel" destination="Zsu-pf-7Pp" id="5ju-ji-k35"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dh9-HI-R7a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6Uz-pM-ARk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1038" y="877"/>
         </scene>
@@ -260,9 +291,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Sushi_in_10_steps" width="1802" height="1200"/>
-        <image name="remedy-kombucha-57708-2" width="1500" height="1000"/>
-        <image name="shutterstock_2042520416-1_374635aacd4cafccef5bb0653ee5dedb" width="900" height="675"/>
+        <image name="Sushi_in_10_steps" width="380" height="400"/>
+        <image name="remedy-kombucha-57708-2" width="380" height="400"/>
+        <image name="shutterstock_2042520416-1_374635aacd4cafccef5bb0653ee5dedb" width="380" height="400"/>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -13,7 +13,11 @@
 		3F34353E294C70B3002FC91D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F34353C294C70B3002FC91D /* Main.storyboard */; };
 		3F343540294C70B4002FC91D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F34353F294C70B4002FC91D /* Assets.xcassets */; };
 		3F343543294C70B4002FC91D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F343541294C70B4002FC91D /* LaunchScreen.storyboard */; };
-		3F90F186294DDB04000B47D4 /* gameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F90F185294DDB04000B47D4 /* gameView.swift */; };
+		3F90F186294DDB04000B47D4 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F90F185294DDB04000B47D4 /* Game.swift */; };
+		3FAD597D29695E6700C81007 /* gameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD597C29695E6700C81007 /* gameViewController.swift */; };
+		3FAD597F29695E8C00C81007 /* gameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD597E29695E8C00C81007 /* gameOverViewController.swift */; };
+		3FAD598129695EFC00C81007 /* youWonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD598029695EFC00C81007 /* youWonViewController.swift */; };
+		3FAD59832969600600C81007 /* homePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD59822969600600C81007 /* homePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +29,11 @@
 		3F34353F294C70B4002FC91D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F343542294C70B4002FC91D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F343544294C70B4002FC91D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F90F185294DDB04000B47D4 /* gameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameView.swift; sourceTree = "<group>"; };
+		3F90F185294DDB04000B47D4 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		3FAD597C29695E6700C81007 /* gameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameViewController.swift; sourceTree = "<group>"; };
+		3FAD597E29695E8C00C81007 /* gameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameOverViewController.swift; sourceTree = "<group>"; };
+		3FAD598029695EFC00C81007 /* youWonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = youWonViewController.swift; sourceTree = "<group>"; };
+		3FAD59822969600600C81007 /* homePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +69,12 @@
 				3F343536294C70B3002FC91D /* AppDelegate.swift */,
 				3F343538294C70B3002FC91D /* SceneDelegate.swift */,
 				3F34353A294C70B3002FC91D /* ViewController.swift */,
-				3F90F185294DDB04000B47D4 /* gameView.swift */,
+				3F90F185294DDB04000B47D4 /* Game.swift */,
 				3F34353C294C70B3002FC91D /* Main.storyboard */,
+				3FAD59822969600600C81007 /* homePageViewController.swift */,
+				3FAD597E29695E8C00C81007 /* gameOverViewController.swift */,
+				3FAD598029695EFC00C81007 /* youWonViewController.swift */,
+				3FAD597C29695E6700C81007 /* gameViewController.swift */,
 				3F34353F294C70B4002FC91D /* Assets.xcassets */,
 				3F343541294C70B4002FC91D /* LaunchScreen.storyboard */,
 				3F343544294C70B4002FC91D /* Info.plist */,
@@ -141,9 +153,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FAD597F29695E8C00C81007 /* gameOverViewController.swift in Sources */,
+				3FAD598129695EFC00C81007 /* youWonViewController.swift in Sources */,
 				3F34353B294C70B3002FC91D /* ViewController.swift in Sources */,
 				3F343537294C70B3002FC91D /* AppDelegate.swift in Sources */,
-				3F90F186294DDB04000B47D4 /* gameView.swift in Sources */,
+				3FAD59832969600600C81007 /* homePageViewController.swift in Sources */,
+				3F90F186294DDB04000B47D4 /* Game.swift in Sources */,
+				3FAD597D29695E6700C81007 /* gameViewController.swift in Sources */,
 				3F343539294C70B3002FC91D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,7 +314,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -327,7 +343,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
